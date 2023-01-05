@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "GoudyOldStyle";
+  src: url("../fonts/GoudyOldStyle.ttf")
+}
+
+#label-input-tipo-2 {
+  padding-left: 0.5em;
+  font-size: large;
+  font-family: "GoudyOldStyle"
+}
+
+@font-face {
+  font-family: "SnackerComic";
+  src: url("../fonts/SnackerComic.ttf")
+}
+
+#label-input-tipo-3 {
+  padding-left: 0.5em;
+  font-size: large;
+  font-family: "SnackerComic"
+}

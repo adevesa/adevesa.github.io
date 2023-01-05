@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Procesos para la generacion de CSS y JS",
+  "main": "main.js",
+  "scripts": {
+    "generate-font-css": "node ./fonts_builder.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adevesa",
+  "license": "ISC"
+}

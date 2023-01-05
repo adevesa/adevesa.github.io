@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+<!--  get the font from ./fonts-->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div id="screen">
+    <div id="background">
+      <div id="border">
+        <label id="name" contenteditable></label>
+        <label id="surname" contenteditable>Devesa Streck</label>
+        <div id="icon"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row g-3">
+      <div class="mb-3 col">
+        <input id="input-name" class="form-control text-center" type="text" value="Nombrex"/>
+      </div>
+      <div class="mb-3 col">
+        <input id="input-surname" class="form-control text-center" type="text" value="Apellido"/>
+      </div>
+    </div>
+    <div class="row g-3">
+      <h2>Tipografia</h2>
+      <div class="mb-3 col">
+        <input id="input-tipo-1" name="tipografia" type="radio" value="Arial"/>
+        <label for="input-tipo-1" id="label-input-tipo-1">Arial</label>
+      </div>
+      <div class="mb-3 col">
+        <input id="input-tipo-2" name="tipografia" type="radio" value="Times New Roman"/>
+        <label for="input-tipo-2" id="label-input-tipo-2">Times New Roman</label>
+      </div>
+      <div class="mb-3 col">
+        <input id="input-tipo-3" name="tipografia" type="radio" value="SnackerComic"/>
+        <label for="input-tipo-3" id="label-input-tipo-3">SnackerComic</label>
+      </div>
+    </div>
+    <div class="row g-3">
+      <h2>Fondos</h2>
+      <div class="mb-3 col">
+        <input id="input-fondo-1" name="fondo" type="radio" value="fondo_1"/>
+        <label for="input-fondo-1" id="label-input-fondo-1"><img src="./fondos/fondo_1.png"></label>
+      </div>
+      <div class="mb-3 col">
+        <input id="input-fondo-2" name="fondo" type="radio" value="fondo_2"/>
+        <label for="input-fondo-2" id="label-input-fondo-2"><img src="./fondos/fondo_2.png"></label>
+      </div>
+    </div>
+    <div class="row g-3">
+      <h2>Icono</h2>
+      <div class="mb-3 col">
+        <input id="input-icono-1" name="icono" type="radio" value="icono_1"/>
+        <label for="input-icono-1" id="label-input-icono-1"><img src="./iconos/icono_1.png"></label>
+      </div>
+      <div class="mb-3 col">
+        <input id="input-icono-2" name="icono" type="radio" value="icono_2"/>
+        <label for="input-icono-2" id="label-input-icono-2"><img src="./iconos/icono_2.png"></label>
+    </div>
+    <div class="row g-3">
+      <h2>Marcos</h2>
+      <div class="mb-3 col">
+        <input id="input-marco-cuadrado" name="marco" type="radio" value="marco-cuadrado"/>
+        <label for="input-marco-cuadrado" id="label-input-marco-cuadrado"><div id="cuadrado-prueba"></div></label>
+      </div>
+      <div class="mb-3 col">
+        <input id="input-marco-redondeado" name="marco" type="radio" value="marco-redondeado"/>
+        <label for="input-marco-redondeado" id="label-input-marco-redondeado"><div id="redondeado-prueba"></div></label>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <style>
+    /*center screen with grid display*/
+    #screen {
+      display: grid;
+      height: 30vh;
+      width: 100vw;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "background";
+      align-items: start;
+      justify-items: center;
+    }
+    /* center background with grid display */
+    #background {
+      position: absolute;
+      background: url("https://www.wowpatterns.com/assets/files/resource_images/diagonal-lines-vector-pattern.jpg");
+      background-size: 100%;
+      opacity: 0.5;
+      border: 2px solid #fff;
+      aspect-ratio: calc(5/1.5);
+      width: 30em;
+    }
+    #name{
+      display: block;
+      position: relative;
+      text-align: center;
+      font-size: 2em;
+      color: #000;
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.5em;
+      padding: 0 1em 0 1em;
+    }
+    #surname{
+      display: block;
+      position: relative;
+      text-align: center;
+      font-size: 2em;
+      color: #000;
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.5em;
+    }
+    /*make a border rounded that involves the div name*/
+    #border {
+      background-color: white;
+      overflow: hidden;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      border: 2px solid #000;
+      margin: 1em 1em 1em 1em;
+      border-radius: 1em;
+    }
+    /*icon image at the right over the #border*/
+    #icon {
+      position: absolute;
+      width: 5em;
+      height: 5em;
+      background: url("https://cdn-icons-png.flaticon.com/512/616/616412.png?w=740&t=st=1672592740~exp=1672593340~hmac=45fa0054349696851a6ff28ddfcc0d141de367ee7b211b7124ba18ba63e6fd13");
+      background-size: 100%;
+      z-index: 1;
+      left: 90%;
+      top: 17%;
+    }
+
+    #options {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr;
+      align-items: start;
+      justify-items: center;
+    }
+
+    #label-input-tipo-1 {
+      padding-left: 0.5em;
+      font-size: large;
+      font-family: Arial
+    }
+
+    #label-input-tipo-2 {
+      padding-left: 0.5em;
+      font-size: large;
+      font-family: 'Times New Roman'
+    }
+
+    #cuadrado-prueba {
+      height: 1.5cm;
+      width: 5cm;
+      border: 1px solid black;
+    }
+
+    #redondeado-prueba {
+      height: 1.5cm;
+      width: 5cm;
+      border: 1px solid black;
+      border-radius: 1em;
+    }
+  </style>
+
+  <script>
+    //when the page is loaded change the input-name value to the label name
+    window.onload = function() {
+      document.getElementById("input-name").addEventListener("keyup", () => {
+        document.getElementById("name").innerHTML = document.getElementById("input-name").value;
+      });
+      document.getElementById("input-surname").addEventListener("keyup", () => {
+        document.getElementById("surname").innerHTML = document.getElementById("input-surname").value;
+      });
+      document.getElementById("name").innerText = document.getElementById("input-name").value;
+      document.getElementById("surname").innerText = document.getElementById("input-surname").value;
+
+      //obtain radiobutton selected
+      var radios = document.getElementsByName('tipografia');
+      for (var i = 0; i < radios.length; i++) {
+        radios[i].onclick = function() {
+          if (this.checked) {
+            document.getElementById("name").style.fontFamily = this.value;
+            document.getElementById("surname").style.fontFamily = this.value;
+          }
+        };
+      }
+
+      var radios_fondos = document.getElementsByName('fondo');
+      for (var j = 0; j < radios_fondos.length; j++) {
+        radios_fondos[j].onclick = function() {
+          if (this.checked) {
+            document.getElementById("background").style.backgroundImage = `url('./fondos/${this.value}.png')`;
+          }
+        };
+      }
+
+      var radios_iconos = document.getElementsByName('icono');
+      for (var k = 0; k < radios_iconos.length; k++) {
+        radios_iconos[k].onclick = function() {
+          if (this.checked) {
+            document.getElementById("icon").style.backgroundImage = `url('./iconos/${this.value}.png')`;
+          }
+        };
+      }
+
+      document.getElementById('input-marco-cuadrado').onclick = function() {
+        document.getElementById("border").style.borderRadius = "0";
+      }
+
+      document.getElementById('input-marco-redondeado').onclick = function() {
+        document.getElementById("border").style.borderRadius = "1em";
+      }
+
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
